@@ -21,6 +21,16 @@
     {
     quote: "You know you're getting old when the candles cost more than the cake.",
     source:"Bob Hope"
+    },
+    {
+    quote: "Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program.",
+    source: "Linus Torvolds",
+    category: "Category: Programming"
+    },
+    {
+    quote: "Price is what you pay.Value is what you get.",
+    source: "Warren Buffet",
+    tag: " , #warrenbuffet"
     }
     ];
 
@@ -107,14 +117,23 @@ function printQuote() {
 //checks for citation property present in currentQuote if true adds to the string
     if ("citation" in currentQuote) {
         html += "<span class='citation'> " + currentQuote.citation + "</span>";
-}
-
-// checks for date property present in currentQuote if true adds to the string
+        
+    }
+// checks for category property present in currentQuote if true adds to the string
+    if ("category" in currentQuote) {
+        html += "<span class='category'> " + currentQuote.category + "</span>";
+    }
+   
+// checks for year property present in currentQuote if true adds to the string
     if ("year" in currentQuote) {
         html += "<span class='year'> " + currentQuote.year + "</span>";
-}
+    }
+// checks for tag property present in currentQuote if true adds to the string
+    if ("tag" in currentQuote) {
+        html += "<span class='tag'>" + currentQuote.tag + "</span>";
+    }
    
- // writes the info from the html variable to the div with the quote-box id
+// writes the info from the html variable to the div with the quote-box id
 // uses the currentColor variable to change the background color
 // uses the currentColor variable to change the button color
     document.getElementById("quote-box").innerHTML = html;
