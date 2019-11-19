@@ -1,2 +1,2 @@
-# techdegree-project-1
- Treehouse Project 1
+project-1
+  Project 1
